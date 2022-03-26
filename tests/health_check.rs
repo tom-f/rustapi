@@ -20,4 +20,7 @@ async fn health_check_works() {
         .unwrap();
 
     assert_eq!(response.status(), StatusCode::OK);
+
+    let body = hyper::body::to_bytes(response.into_body()).await.unwrap();
+    assert_eq!(body.to_vec().len(), 0);
 }
