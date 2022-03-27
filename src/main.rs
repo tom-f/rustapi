@@ -1,5 +1,5 @@
-use std::net::SocketAddr;
 use rustapi::app;
+use std::net::SocketAddr;
 
 #[tokio::main]
 async fn main() {
